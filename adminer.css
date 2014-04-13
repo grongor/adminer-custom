@@ -538,6 +538,10 @@ label {
 	margin-bottom: 15px;
 }
 
+#logins {
+	overflow: visible;
+}
+
 #logins a,
 #tables a,
 #tables span {
