@@ -1,7 +1,7 @@
 <?php
 
 $actualVersion = file_get_contents('version');
-$newVersion = $_COOKIE['adminer_version'];
+$newVersion = isset($_COOKIE['adminer_version']) ? $_COOKIE['adminer_version'] : 0;
 
 if (version_compare($actualVersion, $newVersion) == -1) {
 	file_put_contents('version', $newVersion);
