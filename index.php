@@ -5,7 +5,7 @@ $newVersion = isset($_COOKIE['adminer_version']) ? $_COOKIE['adminer_version'] :
 
 if (version_compare($actualVersion, $newVersion) == -1) {
 	file_put_contents('version', $newVersion);
-	$data = file_get_contents('http://www.adminer.org/latest-mysql-en.php');
+	$data = file_get_contents('https://www.adminer.org/latest-mysql-en.php');
 	file_put_contents('adminer.php', $data);
 }
 
